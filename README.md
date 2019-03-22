@@ -12,11 +12,11 @@ In each iteration, the step size is determined by use of the golden section meth
  
 Usage: see also examples.m 
 
-myProblem = fmindecent(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon); % Default options are applied
+myProblem = fmindescent(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon); % Default options are applied
 
-myProblem = fmindecent(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options); % Input options structure
+myProblem = fmindescent(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options); % Input options structure
 
-myProblem = fmindecent(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon ,'MaxIterations',100); % Input/modify individual options
+myProblem = fmindescent(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon ,'MaxIterations',100); % Input/modify individual options
 
 [x,fval,exitflag,output] = myProblem.solve(); % Solve problem
 
@@ -24,7 +24,7 @@ Available options:
 
 Initialize values to default
 
-options = fmindecent.options();
+options = fmindescent.options();
 
 Algorithm: 'CG'
 Display: 'off'

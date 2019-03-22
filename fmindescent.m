@@ -1,4 +1,4 @@
-classdef fmindecent < handle
+classdef fmindescent < handle
   
   properties(Constant)
     name = 'fmindescent';
@@ -49,7 +49,7 @@ classdef fmindecent < handle
   methods
     
     % Construct
-    function this = fmindecent(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,varargin)
+    function this = fmindescent(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,varargin)
       
       % initialize data structures
       if nargin < 1 || ~isa(fun,'function_handle')
@@ -188,7 +188,7 @@ classdef fmindecent < handle
       end
       
       % initialize options structure
-      this.options = fmindecent.setOptions(varargin);
+      this.options = fmindescent.setOptions(varargin);
       
       % We made it this far
       this.initialized = true;
@@ -201,7 +201,7 @@ classdef fmindecent < handle
       
       if strcmpi(this.options.Display,'iter')
         fprintf('*********************************************************************************************************')
-        fprintf('\n \t \t \t \t \t \t fmindecent optimizer')
+        fprintf('\n \t \t \t \t \t \t fmindescent optimizer')
         fprintf('\n*********************************************************************************************************\n')
         fprintf('\t %10s \t\t %10s \t \t %10s \t \t   %10s \t \t   %10s \n','f(x)','Max inf', 'Norm dx', 'nFeval','IterNo');
       end

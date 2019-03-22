@@ -42,7 +42,7 @@ classdef examples < handle
           ub = [7;10];
           f =@(x) examples.f1(x);
           g =@(x) examples.g1(x);
-          ex = fmindecent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
+          ex = fmindescent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
           [x,fval,exitflag,output] = ex.solve;
           ex.postprocess;
           
@@ -60,7 +60,7 @@ classdef examples < handle
           ub = [4;4];
           f =@(x) examples.f2(x);
           g =@(x) examples.g2(x);
-          ex = fmindecent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
+          ex = fmindescent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
           [x,fval,exitflag,output] = ex.solve;
           ex.postprocess;
           
@@ -79,7 +79,7 @@ classdef examples < handle
           ub = [100;100];
           f =@(x) examples.f3(x);
           g =@(x) examples.g3(x);
-          ex = fmindecent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
+          ex = fmindescent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
           [x,fval,exitflag,output] = ex.solve;
           ex.postprocess;
           
@@ -96,7 +96,7 @@ classdef examples < handle
           ub = [0;10;1e6];
           f =@(x) examples.f4(x);
           g =@(x) examples.g4(x);
-          ex = fmindecent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
+          ex = fmindescent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
           [x,fval,exitflag,output] = ex.solve;
           ex.postprocess;
         case 5
@@ -107,7 +107,7 @@ classdef examples < handle
           ub = [10;10];
           f =@(x) examples.f5(x);
           g =@(x) examples.g5(x);
-          ex = fmindecent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
+          ex = fmindescent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
           [x,fval,exitflag,output] = ex.solve;
           ex.postprocess;
           
@@ -119,7 +119,7 @@ classdef examples < handle
           ub = [10;10];
           f =@(x) examples.f6(x);
           g =[];
-          ex = fmindecent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
+          ex = fmindescent(f,x0,[],[],[],[],lb,ub,g,'display','iter','Algorithm',this.algorithm);
           [x,fval,exitflag,output] = ex.solve;
           ex.postprocess;
       end % switch
